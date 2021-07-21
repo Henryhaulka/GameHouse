@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2021_07_21_131402) do
   enable_extension "plpgsql"
 
   create_table "leagues", force: :cascade do |t|
-    t.string "Title"
-    t.text "Text"
+    t.string "title"
+    t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -34,4 +34,5 @@ ActiveRecord::Schema.define(version: 2021_07_21_131402) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 end
