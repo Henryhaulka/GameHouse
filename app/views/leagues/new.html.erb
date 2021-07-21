@@ -1,0 +1,28 @@
+<h1>New League</h1>
+
+<%= form_with model: @league do |f| %>
+    <% if @league.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@league.errors.count, "error") %> prohibited this league from being saved:</h2>
+
+            <ul>
+                 <% @league.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+   <div class="field">
+        <%= f.label :Title %><br>
+        <%= f.text_field :Title, autocomplete: 'title' %>
+  </div><br><br>
+  <div class="field">
+        <%= f.label :Text %><br>
+        <%= f.text_field :description, autocomplete: 'description' %>
+  </div><br><br>
+  <div class="action" %>
+        <%= f.submit 'submit' %>
+  </div>
+<% end %>
+
