@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+   <%=current_user.name %>
+<% end %>
 <% @leagues.each do |l| %>
    <p><%= link_to l.title, l%></p>
 <% end %>

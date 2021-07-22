@@ -1,5 +1,7 @@
 <h4> League Details</h4>
   <p><%= @league.title %></p>
   <p><%= @league.text %></p>
+  <p><%= time_ago_in_words(@league.created_at) %> ago</p>
+  <p><%= @league.author.name %></p>
 <%=link_to 'Edit League', edit_league_path %><br>
 <%=link_to 'Delete League', league_path, method: :delete, data: {confirm: 'Are you sure you want to delete this League?'} %>
