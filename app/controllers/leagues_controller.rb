@@ -1,11 +1,11 @@
 class LeaguesController < ApplicationController
-   
+    before_action :authenticate_user!, except: [:index]
     def index
         @leagues = League.all
     end
 
     def new
-        @league = League.new
+        @league = current_user.leagues.build
     end
 
     def show
@@ -26,7 +26,7 @@ class LeaguesController < ApplicationController
     end
 
     def create
-        @league = League.new(league_params)
+        @league = current_user.leagues.build(league_params)
         if @league.save
             redirect_to root_path
         else
