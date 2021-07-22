@@ -1,5 +1,6 @@
 class LeaguesController < ApplicationController
     before_action :authenticate_user!, except: [:index]
+    before_action :permission, only: [:edit, :update, :destroy]
     def index
         @leagues = League.all
     end
@@ -38,6 +39,11 @@ class LeaguesController < ApplicationController
         @league = League.find(params[:id])
          @league.destroy
             redirect_to root_path 
+    end
+
+    def permission
+        @league = current_user.leagues.find_by(id: params[:id])
+        redirect_to league_path, notice: 'You are not authorized to edit or delete this League' if @league == nil
     end
 
     private
