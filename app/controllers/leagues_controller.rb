@@ -43,7 +43,7 @@ class LeaguesController < ApplicationController
 
     def permission
         @league = current_user.leagues.find_by(id: params[:id])
-        redirect_to league_path, notice: 'You are not authorized to edit or delete this League' if @league == nil
+        redirect_to league_path, alert: 'You are not authorized to edit or delete this League' if @league == nil
     end
 
     private
