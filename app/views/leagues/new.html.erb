@@ -22,6 +22,10 @@
         <%= f.label :text , class: 'form-label' %><br>
         <%= f.text_field :text, autocomplete: 'text', class: 'form-control' %>
   </div><br>
+
+  <div class = "field">
+          <%= select_tag(:category_id, options_for_select([["SOCCER", 1], ["CAR RACING", 2], ["ACTION", 3], ["ADVENTURE", 4], ["LOGIC", 5]]), prompt: "Select a category") %>
+  </div><br>
   <div class="field">
   <%= f.file_field :image, as: :file %>
   </div><br>
