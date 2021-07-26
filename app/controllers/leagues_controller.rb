@@ -33,6 +33,10 @@ class LeaguesController < ApplicationController
         @logic = League.where(category_id: 5).order(created_at: :desc)
     end
 
+    def other
+        @other = League.where(category_id: 6).order(created_at: :desc)
+    end
+
     def edit
         @league = League.find(params[:id])
     end

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/action", to: "leagues#action"
   get "/adventure", to: "leagues#adventure"
   get "/logic", to: "leagues#logic"
+  get "/other", to: "leagues#other"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
