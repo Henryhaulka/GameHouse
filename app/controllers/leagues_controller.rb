@@ -13,9 +13,18 @@ class LeaguesController < ApplicationController
         @league = League.find(params[:id])
     end
 
+    def soccer
+        @soccer = League.where(category_id: 1).order(created_at: :desc)
+    end
+
+    def adventure
+        @adventure = League.where(category_id: 4).order(created_at: :desc)
+    end
+
     def edit
         @league = League.find(params[:id])
     end
+
 
     def update
         @league = League.find(params[:id])
@@ -28,6 +37,7 @@ class LeaguesController < ApplicationController
 
     def create
         @league = current_user.leagues.build(league_params)
+        @league.category_id = params[:category_id]
         if @league.save
             redirect_to root_path
         else
@@ -41,12 +51,13 @@ class LeaguesController < ApplicationController
             redirect_to root_path 
     end
 
+    
+    private
     def permission
         @league = current_user.leagues.find_by(id: params[:id])
         redirect_to league_path, alert: 'You are not authorized to edit or delete this League' if @league == nil
     end
 
-    private
     def league_params
         params.require(:league).permit(:title, :text, :image)
     end
