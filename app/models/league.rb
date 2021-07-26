@@ -1,4 +1,6 @@
 class League < ApplicationRecord
+    has_many :relates
+    has_many :categories, through: :relates
     belongs_to :author, class_name: 'User'
     validates :title, presence: true, length: { mininum: 3, maximum: 20}
     validates :text, presence: true, length: {maximum: 500}
