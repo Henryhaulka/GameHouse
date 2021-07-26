@@ -1,0 +1,21 @@
+<div>
+  <% @car_racing.each do |car_racing| %>
+    <div>
+      <%= image_tag car_racing.image.url, class:"img-fluid", alt: "car image" %>
+    </div>
+    <div>
+      <div >
+        <%= car_racing.category_id %>
+      </div>
+      <div>
+        <%= car_racing.title %>
+      </div>
+      <div>
+        <%= car_racing.text %>
+      </div>
+      
+      
+      </div>
+    </div>
+  <% end %>
+  <div>

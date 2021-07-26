@@ -17,6 +17,10 @@ class LeaguesController < ApplicationController
         @soccer = League.where(category_id: 1).order(created_at: :desc)
     end
 
+    def car_racing
+        @car_racing = League.where(category_id: 2).order(created_at: :desc)
+    end
+
     def adventure
         @adventure = League.where(category_id: 4).order(created_at: :desc)
     end
