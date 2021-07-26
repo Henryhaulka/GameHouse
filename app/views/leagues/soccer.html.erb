@@ -1,0 +1,20 @@
+soooo
+<div class = "row ">
+  <% @soccer.each do |soccer| %>
+    <div class= "col-md-3">
+      <%= image_tag soccer.image.url, class:"img-fluid", alt: "car image" %>
+    </div>
+    <div class= "col-md-3">
+      <div>
+        <%= soccer.category_id %>
+      </div>
+      <div>
+        <%= soccer.title %>
+      </div>
+      <div>
+        <%= soccer.text %>
+      </div>
+    </div>
+<% end %>
+</div>
+
