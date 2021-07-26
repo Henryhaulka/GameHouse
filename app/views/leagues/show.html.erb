@@ -1,6 +1,11 @@
 <h4> League Details</h4>
   <p><%= @league.title %></p>
   <p><%= @league.text %></p>
+  <p>
+  <strong>Category:</strong>
+  <%= @league.category_id %>
+ 
+</p>
   <p><%= image_tag @league.image.url,class:" w-100 " %></p>
   <p><%= time_ago_in_words(@league.created_at) %> ago</p>
   <p><%= @league.author.name %></p>
