@@ -1,0 +1,21 @@
+<div>
+  <% @adventure.each do |adventure| %>
+    <div>
+      <%= image_tag adventure.image.url, class:"img-fluid", alt: "car image" %>
+    </div>
+    <div>
+      <div class =  >
+        <%= adventure.category_id %>
+      </div>
+      <div>
+        <%= adventure.title %>
+      </div>
+      <div>
+        <%= adventure.text %>
+      </div>
+      
+      
+      </div>
+    </div>
+  <% end %>
+  <div>
