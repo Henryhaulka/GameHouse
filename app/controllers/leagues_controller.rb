@@ -29,6 +29,10 @@ class LeaguesController < ApplicationController
         @adventure = League.where(category_id: 4).order(created_at: :desc)
     end
 
+    def logic
+        @logic = League.where(category_id: 5).order(created_at: :desc)
+    end
+
     def edit
         @league = League.find(params[:id])
     end
