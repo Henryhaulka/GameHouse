@@ -1,0 +1,21 @@
+<div>
+  <% @action.each do |action| %>
+    <div>
+      <%= image_tag action.image.url, class:"img-fluid", alt: "car image" %>
+    </div>
+    <div>
+      <div >
+        <%= action.category_id %>
+      </div>
+      <div>
+        <%= action.title %>
+      </div>
+      <div>
+        <%= action.text %>
+      </div>
+      
+      
+      </div>
+    </div>
+  <% end %>
+  <div>
