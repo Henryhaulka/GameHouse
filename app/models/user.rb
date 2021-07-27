@@ -4,5 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
       has_many :leagues, foreign_key: :author_id
+      has_many :votes, foreign_key: :user_id
+
       validates :name, presence: true, length: {minimum: 3, maximum: 15}
 end

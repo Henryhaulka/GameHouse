@@ -1,4 +1,5 @@
 class League < ApplicationRecord
+    has_many :votes, foreign_key: :league_id
     has_many :relates
     has_many :categories, through: :relates
     belongs_to :author, class_name: 'User'
