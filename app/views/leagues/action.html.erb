@@ -2,8 +2,8 @@
   <% @action.each do |action| %>
     <div class= "col-md-3">
       <%= image_tag action.image.url, class:"img-fluid soccer" %>
-    </div>
-    <div>
+    </div >
+    <div class= "col-md-3">
       <div class= "col-md-3 mt-2">
         <%= action.category_id %>
       </div>
@@ -14,9 +14,7 @@
       <div>
         <%= action.text %>
       </div>
-      
-      
-      </div>
+    </div>
   
   <% end %>
   </div><br><br>
