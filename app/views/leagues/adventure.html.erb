@@ -1,21 +1,16 @@
-<div>
+<div class = "row mb-5">
   <% @adventure.each do |adventure| %>
-    <div>
-      <%= image_tag adventure.image.url, class:"img-fluid", alt: "car image" %>
+    <div class= "col-md-3">
+      <%= image_tag adventure.image.url, class:"img-fluid soccer" %>
     </div>
-    <div>
-      <div >
-        <%= adventure.category_id %>
-      </div>
+    <div class= "col-md-3 mt-2">
       <div>
-        <%= adventure.title %>
+      <h3 class= 'text-primary'><%= adventure.title %></h3>
+      <hr>
       </div>
       <div>
         <%= adventure.text %>
       </div>
-      
-      
       </div>
-    </div>
   <% end %>
-  <div>
+  </div><br><br><br>

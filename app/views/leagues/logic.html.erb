@@ -2,19 +2,17 @@
 <div class = "row ">
 <% @logic.each do |logic| %>
   <div class= "col-md-3">
-    <%= image_tag logic.image.url, class:"img-fluid", alt: "car image" %>
+    <%= image_tag logic.image.url, class:"img- soccer"%>
   </div>
   <div class= "col-md-3">
     <div>
-      <%= logic.category_id %>
-    </div>
-    <div>
-      <%= logic.title %>
+    <h3 class= 'text-primary'><%= logic.title %></h3>
+    <hr>
     </div>
     <div>
       <%= logic.text %>
     </div>
   </div>
 <% end %>
-</div>
+</div><br><br><br>
 

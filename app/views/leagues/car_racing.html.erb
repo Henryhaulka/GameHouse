@@ -1,21 +1,16 @@
-<div>
+<div class = "row mb-5">
   <% @car_racing.each do |car_racing| %>
-    <div>
-      <%= image_tag car_racing.image.url, class:"img-fluid", alt: "car image" %>
+    <div class= "col-md-3"> 
+      <%= image_tag car_racing.image.url, class:"img-fluid soccer" %>
     </div>
-    <div>
-      <div >
-        <%= car_racing.category_id %>
-      </div>
+    <div class= "col-md-3 mt-2">
       <div>
-        <%= car_racing.title %>
+      <h3 class= 'text-primary'> <%= car_racing.title %></h3>
+      <hr>
       </div>
       <div>
         <%= car_racing.text %>
       </div>
-      
-      
-      </div>
     </div>
   <% end %>
-  <div>
+  </div><br><br>
