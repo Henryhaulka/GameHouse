@@ -3,7 +3,13 @@ class LeaguesController < ApplicationController
     before_action :permission, only: [:edit, :update, :destroy]
     def index
         @leagues = League.all
-        # @most_voted_league = League.most_voted_league
+        @most_voted_league = League.most_voted_league
+        @soccer = League.where(category_id: 1).order(created_at: :desc).limit(1)
+        @car_racing = League.where(category_id: 2).order(created_at: :desc).limit(1)
+        @action = League.where(category_id: 3).order(created_at: :desc).limit(1)
+        @adventure = League.where(category_id: 4).order(created_at: :desc).limit(1)
+        @logic = League.where(category_id: 5).order(created_at: :desc).limit(1)
+        @other = League.where(category_id: 6).order(created_at: :desc).limit(1)
     end
 
     def new
