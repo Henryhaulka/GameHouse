@@ -7,4 +7,9 @@ class League < ApplicationRecord
     validates :text, presence: true, length: {maximum: 500}
     has_attached_file :image, styles: { large: "1200x1000", medium: "300x300>"}, default_url: "/images/:style/missing.png"
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+    def self.most_voted_league
+        league = League.includes(:votes).sort { |a, b| a.votes.size <=> b.votes.size }.reverse
+        league[0]
+    end
 end
