@@ -22,3 +22,42 @@ footer {
 .soccer {
     height: 220px;
 }
+
+.grid {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.grid2 {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) ;
+    grid-template-rows: 1fr;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: -150px;
+    left: 16px;
+    color:yellow;
+    font-size: large;
+  }
+  .top-left {
+    position: absolute;
+    top: 120px;
+    left: 16px;
+    color:white;
+
+  }
+  .show {
+      width: 80%;
+      margin: auto;
+  }
