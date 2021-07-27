@@ -3,6 +3,7 @@ class LeaguesController < ApplicationController
     before_action :permission, only: [:edit, :update, :destroy]
     def index
         @leagues = League.all
+        # @most_voted_league = League.most_voted_league
     end
 
     def new
@@ -12,6 +13,7 @@ class LeaguesController < ApplicationController
     def show
         @league = League.find(params[:id])
         @vote = Vote.where(league_id: League.find(params[:id]))
+        @voters = current_user.votes.find_by(league_id: @league.id)
     end
 
     def soccer
