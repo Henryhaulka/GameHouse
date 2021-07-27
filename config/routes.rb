@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {registrations: 'registrations'}
   root 'leagues#index'
   resources :leagues 
+  resources :votes, only: [:create, :destroy]
 
   get "/soccer", to: "leagues#soccer"
   get "/car_racing", to: "leagues#car_racing"
