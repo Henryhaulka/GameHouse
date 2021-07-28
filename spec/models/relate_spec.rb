@@ -4,6 +4,4 @@ RSpec.describe Relate, type: :model do
     it { should belong_to(:league) }
     it { should belong_to(:category) }
   end
-
 end
-
