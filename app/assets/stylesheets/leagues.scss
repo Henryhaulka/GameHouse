@@ -45,17 +45,22 @@ footer {
 
   .bottom-left {
     position: absolute;
-    bottom: -150px;
+    bottom: 90px;
     left: 16px;
-    color: white;
+    color:white;
     font-size: large;
   }
   .top-left {
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 16px;
     color:white;
 
+  }
+
+  .feature {
+    height: 500px;
+    width: 100%;
   }
 
   .soccer_name {

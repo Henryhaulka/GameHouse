@@ -1,6 +1,6 @@
 <div class="contain">
 <% if @most_voted_league %>
-<%= image_tag @most_voted_league.image.url, class: 'img-fluid p-0 m-0'%>
+<%= image_tag @most_voted_league.image.url, class: 'img-fluid p-0 m-0 feature'%>
 <div class="top-left"><h2><%= @most_voted_league.title%> / Category: <%= @most_voted_league.category_id%></h2> </div>
 <div class="bottom-left"><p><%= @most_voted_league.text%> <p></div>
 </div>
