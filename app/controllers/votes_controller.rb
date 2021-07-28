@@ -3,10 +3,10 @@ class VotesController < ApplicationController
     if Vote.where(league_id: League.find(params[:league_id]), user_id: current_user.id).exists?
       return redirect_to root_path, notice: 'You already voted for this League '
     end
-     # rubocop:disable LineLength
+    # rubocop:disable Layout/LineLength
     @vote = League.find(params[:league_id]).votes.build(user_id: current_user.id)
     redirect_to league_path(id: League.find(params[:league_id])), notice: 'Thanks!!! You have successfully voted for this League' if @vote.save
-    # rubocop:enable LineLength
+    # rubocop:enable Layout/LineLength
   end
 
   def destroy
