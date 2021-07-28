@@ -4,9 +4,8 @@ class VotesController < ApplicationController
       return redirect_to root_path, notice: 'You already voted for this League '
     end
     @vote = League.find(params[:league_id]).votes.build(user_id: current_user.id)
-    if @vote.save
       redirect_to league_path(id: League.find(params[:league_id])),
-                  notice: 'Thanks!!! You have successfully voted for this League'
+                  notice: 'Thanks!!! You have successfully voted for this League' if @vote.save
     end
   end
 
