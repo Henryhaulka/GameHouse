@@ -9,7 +9,7 @@ class League < ApplicationRecord
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
     def self.most_voted_league
-        league = League.includes(:votes).sort { |a, b| a.votes.size <=> b.votes.size }.reverse
-        league[0]
+        leagues = League.includes(:votes).sort { |a, b| a.votes.size <=> b.votes.size }.reverse
+        leagues.first
     end
 end
