@@ -2,88 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .orange {
-    color:rgb(247, 81, 4);
+  color:rgb(247, 81, 4);
 }
 
 .oran {
-    background-color:rgb(247, 81, 4);
+  background-color:rgb(247, 81, 4);
 }
 
 .white {
-    color: white;
+  color: white;
 }
 
 footer {
-    width: 100%;
-    bottom: 0;
-    position: fixed;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
 }
 
 .soccer {
-    height: 220px;
+  height: 220px;
 }
 
 .grid {
-    padding-top: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-
 .grid2 {
-    padding-top: 0;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr) ;
-    grid-template-rows: 1fr;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr) ;
+  grid-template-rows: 1fr;
 }
 
 .container {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
+  position: relative;
+  text-align: center;
+  color: white;
+}
   
-  .bottom-left {
-    position: absolute;
-    bottom: 90px;
-    left: 16px;
-    color:white;
-    font-size: large;
-  }
-  .top-left {
-    position: absolute;
-    top: 100px;
-    left: 16px;
-    color:white;
+.bottom-left {
+  position: absolute;
+  bottom: 90px;
+  left: 16px;
+  color:white;
+  font-size: large;
+}
 
-  }
+.top-left {
+  position: absolute;
+  top: 100px;
+  left: 16px;
+  color:white;
+}
 
-  .feature {
-    height: 500px;
-    width: 100%;
-  }
+.feature {
+  height: 500px;
+  width: 100%;
+}
 
-  .soccer_name {
-    position: absolute;
-    bottom: 30px;
-    color: white;
-    left: 10px;
-    font-size: large;
-  }
+.soccer_name {
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  left: 10px;
+  font-size: large;
+}
 
-  .soccer_tag {
-    position: absolute;
-    top: 10px;
-    color: white;
-    left: 10px;
-    font-size: large;
-  }
-  .show {
-      width: 80%;
-      margin: auto;
-  }
+.soccer_tag {
+  position: absolute;
+  top: 10px;
+  color: white;
+  left: 10px;
+  font-size: large;
+}
 
-  .block {
-    position: relative;
-    text-align: center;
-  }
+.show {
+  width: 80%;
+  margin: auto;
+}
+
+.block {
+  position: relative;
+  text-align: center;
+}
