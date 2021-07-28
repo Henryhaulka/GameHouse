@@ -10,7 +10,7 @@
     <p><%= @league.text %></p>
     <strong>Created by:</strong><p><%= @league.author.name %>
     <%= time_ago_in_words(@league.created_at) %> ago</p>
-     <%= vote_or_unvote(@voters, @league) %>
+    <%= vote_or_unvote(@league, @voters) %>
     <% if current_user == @league.author %>
   <p><%=link_to 'Edit League', edit_league_path %></p>
   <%=link_to 'Delete League', league_path, method: :delete, data: {confirm: 'Are you sure you want to delete this League?'} %>
