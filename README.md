@@ -13,8 +13,8 @@ This project is a Game blogging app, where users can register, start writing abo
 - when you click on "NEW GAME",a form with all necessary fields is displayed.
 
 
-![screenshot]()
-
+![screenshot](img/game1.png)
+![screenshot](img/game2.png)
 
 
 
