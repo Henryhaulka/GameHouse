@@ -1,7 +1,7 @@
 <div class="contain">
 <% if @most_voted_league %>
 <%= image_tag @most_voted_league.image.url, class: 'img-fluid p-0 m-0 feature'%>
-<div class="top-left"><h2><%= @most_voted_league.title%> / Category: <%= @most_voted_league.category_id%></h2> </div>
+<div class="top-left"><h2><%= @most_voted_league.title%></h2> </div>
 <div class="bottom-left"><p><%= @most_voted_league.text%> <p></div>
 </div>
 
@@ -13,7 +13,7 @@
               <%= image_tag soccer.image.url, size: "256x300",class:'w-100', alt: "recent soccer image" %>
             </div>
             <div class = "soccer_tag">
-              Category: <%= soccer.category_id %>
+              <%= link_to "SOCCER", soccer_path,class: 'text-white text-decoration-none' %>
               <div style="border-top: 2px solid yellow;"></div>
             </div>
             <div class = "soccer_name">
@@ -28,7 +28,7 @@
                  <%= image_tag car_racing.image.url, size: "256x300",class:'w-100', alt: "recent car_racings image" %>
                </div>
                <div class = "soccer_tag">
-              Category: <%= car_racing.category_id %>
+               <%= link_to "CAR RACING", car_racing_path, class: 'text-white text-decoration-none'%>
               <div style="border-top: 2px solid yellow;"></div>
             </div>
                <div class = "soccer_name">
@@ -42,7 +42,7 @@
                  <%= image_tag action.image.url, size: "256x300", class:'w-100',alt: "recent action image" %>
                </div>
                <div class = "soccer_tag">
-              Category: <%= action.category_id %>
+               <%= link_to "ACTION", action_path, class: 'text-white text-decoration-none' %>
               <div style="border-top: 2px solid yellow;"></div>
             </div>
                <div class = "soccer_name">
@@ -56,7 +56,7 @@
                  <%= image_tag adventure.image.url, size: "256x300", class:'w-100',alt: "recent adventure image" %>
                </div>
                <div class = "soccer_tag">
-              Category: <%= adventure.category_id %>
+               <%= link_to "ADVENTURE", adventure_path ,  class: 'text-white text-decoration-none'%>
               <div style="border-top: 2px solid yellow;"></div>
             </div>
                <div class = "soccer_name">
@@ -65,17 +65,5 @@
                
              <% end %>
            </div>
-
-            
-           
-             <div class = "">
-             <% @other.each do |others| %>
-               <div class = "others_image">
-                 <%= image_tag others.image.url,class: 'img-fluid', alt: "recent others image" %>
-               </div>
-               <div class = "c_otherss">
-                 <%= others.title %>
-               </div>
-             <% end %>
            </div>      
       </div><br><br>
