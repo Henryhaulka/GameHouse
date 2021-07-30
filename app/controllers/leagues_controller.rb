@@ -18,7 +18,7 @@ class LeaguesController < ApplicationController
 
   def show
     @league = League.find(params[:id])
-    @vote = Vote.where(league_id: League.find(params[:id])).includes(:votes)
+    @vote = Vote.where(league_id: League.find(params[:id]))
     @voters = current_user.votes.find_by(league_id: @league.id)
   end
 

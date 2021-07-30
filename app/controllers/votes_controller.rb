@@ -6,13 +6,13 @@ class VotesController < ApplicationController
 
     # rubocop:disable Layout/LineLength
     @vote = League.find(params[:league_id]).votes.build(user_id: current_user.id)
-    redirect_to league_path(id: League.find(params[:league_id])), notice: 'Thanks!!! You have successfully voted for this League' if @vote.save
+    redirect_to league_path(id: params[:league_id]), notice: 'Thanks!!! You have successfully voted for this League' if @vote.save
     # rubocop:enable Layout/LineLength
   end
 
   def destroy
     @league = League.find(params[:league_id])
-    @vote = Vote.find_by(league_id: @league.id, user: current_user.id)
-    redirect_to league_path(id: @league.id), notice: 'You have unvoted this league' if @vote.destroy
+    @vote = Vote.find_by(league_id: @league.id, user_id: current_user.id)
+    redirect_to league_path(id: params[:league_id]), notice: 'You have unvoted this league' if @vote.destroy
   end
 end
