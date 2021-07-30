@@ -1,0 +1,19 @@
+<div class="show">
+  <h2 class='text-center'> Game Details</h2>
+   <p><strong>Game Title:</strong> <%= @league.title %></p>
+    <p>
+    <strong>Category:</strong>
+    <%= @league.category_id %>
+  
+  </p>
+    <p><%= image_tag @league.image.url,class:" w-100 " %></p>
+    <p><%= @league.text %></p>
+    <strong>Created by:</strong><p><%= @league.author.name %>
+    <%= time_ago_in_words(@league.created_at) %> ago</p>
+    <%= vote_or_unvote(@league, @voters) %>
+    <% if current_user == @league.author %>
+  <p><%=link_to 'Edit League', edit_league_path %></p>
+  <%=link_to 'Delete League', league_path, method: :delete, data: {confirm: 'Are you sure you want to delete this League?'} %>
+  <% end %>
+  <br><br><br><br><br><br><br>
+</div>

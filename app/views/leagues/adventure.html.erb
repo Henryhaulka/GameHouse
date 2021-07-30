@@ -1,0 +1,16 @@
+<div class = "row mb-5">
+  <% @adventure.each do |adventure| %>
+    <div class= "col-md-3">
+      <%= image_tag adventure.image.url, class:"img-fluid soccer" %>
+    </div>
+    <div class= "col-md-3 mt-2">
+      <div>
+      <h3 class= 'text-primary'><%= adventure.title %></h3>
+      <hr>
+      </div>
+      <div>
+        <%= adventure.text %>
+      </div>
+      </div>
+  <% end %>
+  </div><br><br><br>

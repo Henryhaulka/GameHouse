@@ -1,0 +1,21 @@
+<div class = "row mb-5">
+  <% @action.each do |action| %>
+    <div class= "col-md-3">
+      <%= image_tag action.image.url, class:"img-fluid soccer" %>
+    </div >
+    <div class= "col-md-3">
+      <div class= "col-md-3 mt-2">
+        <%= action.category_id %>
+      </div>
+      <div>
+      <h3 class= 'text-primary'><%= action.title %></h3>
+      <hr>
+      </div>
+      <div>
+        <%= action.text %>
+      </div>
+    </div>
+  
+  <% end %>
+  </div><br><br>
+  

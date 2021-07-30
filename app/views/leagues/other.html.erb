@@ -1,0 +1,16 @@
+<div class = "row ">
+  <% @other.each do |other| %>
+    <div class= "col-md-3">
+      <%= image_tag other.image.url, class:"img-fluid soccer"%>
+    </div>
+    <div class= "col-md-3">
+      <div>
+      <h3 class= 'text-primary'><%= other.title %></h3>
+      </div>
+      <div>
+        <%= other.text %>
+      </div>
+    </div>
+<% end %>
+</div><br><br>
+

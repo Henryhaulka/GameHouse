@@ -1,0 +1,69 @@
+<div class="contain">
+<% if @most_voted_league %>
+<%= image_tag @most_voted_league.image.url, class: 'img-fluid p-0 m-0 feature'%>
+<div class="top-left"><h2><%= @most_voted_league.title%></h2> </div>
+<div class="bottom-left"><p><%= @most_voted_league.text%> <p></div>
+</div>
+
+
+<div class = "grid">
+        <div class= 'block'>
+          <% @soccer.each do |soccer| %>
+            <div class = "soccer_image">
+              <%= image_tag soccer.image.url, size: "256x300",class:'w-100', alt: "recent soccer image" %>
+            </div>
+            <div class = "soccer_tag">
+              <%= link_to "SOCCER", soccer_path,class: 'text-white text-decoration-none' %>
+              <div style="border-top: 2px solid yellow;"></div>
+            </div>
+            <div class = "soccer_name">
+              <%= soccer.title %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>  
+           <div class = "block">
+             <% @car_racing.each do |car_racing| %>
+               <div class = "car_racing_image">
+                 <%= image_tag car_racing.image.url, size: "256x300",class:'w-100', alt: "recent car_racings image" %>
+               </div>
+               <div class = "soccer_tag">
+               <%= link_to "CAR RACING", car_racing_path, class: 'text-white text-decoration-none'%>
+              <div style="border-top: 2px solid yellow;"></div>
+            </div>
+               <div class = "soccer_name">
+                 <%= car_racing.title %>
+               </div>
+             <% end %>
+           </div>
+           <div class = "block">
+             <% @action.each do |action| %>
+               <div class = "action_image">
+                 <%= image_tag action.image.url, size: "256x300", class:'w-100',alt: "recent action image" %>
+               </div>
+               <div class = "soccer_tag">
+               <%= link_to "ACTION", action_path, class: 'text-white text-decoration-none' %>
+              <div style="border-top: 2px solid yellow;"></div>
+            </div>
+               <div class = "soccer_name">
+                 <%= action.title %>
+               </div>
+             <% end %>
+           </div>
+           <div class = "block">
+             <% @adventure.each do |adventure| %>
+               <div class = "adventure_image">
+                 <%= image_tag adventure.image.url, size: "256x300", class:'w-100',alt: "recent adventure image" %>
+               </div>
+               <div class = "soccer_tag">
+               <%= link_to "ADVENTURE", adventure_path ,  class: 'text-white text-decoration-none'%>
+              <div style="border-top: 2px solid yellow;"></div>
+            </div>
+               <div class = "soccer_name">
+                 <%= adventure.title %>
+               </div>
+               
+             <% end %>
+           </div>
+           </div>      
+      </div><br><br>

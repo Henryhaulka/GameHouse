@@ -1,0 +1,37 @@
+<div class='w-75 mx-auto'>
+<h1 class='text-center orange'><i>New Game</i> </h1>
+
+<%= form_with model: @league do |f| %>
+    <% if @league.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@league.errors.count, "error") %> prohibited this league from being saved:</h2>
+
+            <ul>
+                 <% @league.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+   <div class="field">
+        <%= f.label :title , class: 'form-label'%><br>
+        <%= f.text_field :title, autocomplete: 'title', class: 'form-control' %>
+  </div><br><br>
+  <div class="field">
+        <%= f.label :text , class: 'form-label' %><br>
+        <%= f.text_field :text, autocomplete: 'text', class: 'form-control' %>
+  </div><br>
+
+  <div class = "field">
+          <%= select_tag(:category_id, options_for_select([["SOCCER", 1], ["CAR RACING", 2], ["ACTION", 3], ["ADVENTURE", 4], ["LOGIC", 5], ["OTHERS", 6]]), prompt: "Select a category") %>
+  </div><br>
+  <div class="field">
+  <%= f.file_field :image, as: :file %>
+  </div><br>
+  <div class="action" %>
+        <%= f.submit 'submit', class: 'btn btn-success' %>
+  </div>
+<% end %>
+</div>
+
