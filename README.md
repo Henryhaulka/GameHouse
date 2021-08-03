@@ -1,5 +1,5 @@
 # Microverse ROR Capstone Project - Blog app(Gamehouse)
-This project is a Game blogging app, where users can register, start writing about the latest games, read about games descriptions written by others users, and users can vote/unvote game or games.The game with the highest votes get featured(takes a full width of the home page).
+This is a Game blogging app, where users can create account and start writing and reading about the latest games, games description written by others users, users can vote/unvote game or games.The game with the highest  number votes get featured (takes a full width of the home page).
 
 ## Project features
 
