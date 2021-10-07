@@ -1,16 +1,16 @@
 # Microverse ROR Capstone Project - Blog app(Gamehouse)
-This is a Desktop-only blogging app, where users can create account and start writing and reading about the latest games, games description written by others users, users can vote/unvote game or games.The game with the highest  number votes get featured (takes a full width of the home page).
-
+This is a Desktop-only blogging app, where users can create accounts and start writing and reading about the latest games, games description written by other users, users can vote/unvote games or games. The game with the highest number of votes gets featured (takes the full width of the home page).
 ## Project features
 
 - Users can create accounts and log in.
 - When logged in, users can create game articles, update or delete them.
-- When logged in users, a user can vote a game(article).
+- When logged in users, a user can vote for a game(article).
 - Featured game article is showed at the top which is the most voted game.
-- When a game article is created the category and name of the game is showed on the home page.
+- When a game article is created the category and name of the game are showed on the home page.
 - When a user clicks on the specific category it sorts games(article) just by that category
-- In categories right side field users can see how many articles each category has.
-- when you click on "NEW GAME",a form with all necessary fields is displayed.
+- In the categories right side field users can see how many articles each category has.
+- when you click on "NEW GAME", a form with all necessary fields is displayed.
+
 
 
 ![screenshot](img/game1.png)
